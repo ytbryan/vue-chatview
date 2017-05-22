@@ -1,0 +1,327 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://unpkg.com/vue@2.2.1"></script>
+<style media="screen">
+
+  .scrolloff {
+    pointer-events: none;
+  }
+
+  img {
+    border-radius: 7px;
+  }
+
+  .right {
+    float:right;
+  }
+
+  a {
+    width: 100%;
+  }
+
+  .date {
+    background-color: #dcf8c6;
+    padding: 7px 12px;
+    border-radius: 4px;
+    width: 100px;
+    text-align:center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  #text-input {
+    padding: 7px 12px;
+  }
+
+  .icon-msg-dblcheck {
+    background-image: url(blob:https://web.whatsapp.com/7399fda0-fe2b-4970-9bff-dcbfb5048236);
+  }
+
+  #load-more {
+    border: 1px solid #d1d1d1;
+    text-align: center;
+    border-radius: 4px;
+    /*background-color: #dcf8c6;*/
+    padding: 7px 12px;
+    margin-bottom: 10px;
+  }
+
+  .float_right {
+    float:right;
+    margin-right: 10px;
+  }
+
+  .stick_bottom {
+    position: relative;
+    bottom: 5px;
+    width:100%
+  }
+
+  .stick_bottom input {
+    /*width: 200px;*/
+    /*max-*/
+    width:95%
+  }
+
+  body {
+    /*background-color: #f2f3f5;*/
+  }
+
+  .container-left {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .container-right {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+  }
+
+  .your-chat-bubble {
+    float:right;
+    border: 1px solid #d1d1d1;
+    background-color: #e9ebee;
+    padding: 7px 12px;
+    border-radius: 4px;
+    max-width: 70%;
+
+  }
+
+  .other-chat-bubble {
+    float: left;
+    background-color: #4080ff;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 4px;
+    max-width: 75%;
+
+  }
+
+
+  .whatsapp-chat-bubble {
+    background-color: #dcf8c6;
+    padding: 7px 12px;
+    border-radius: 4px;
+    max-width: 50%;
+    border-radius: 7.5px;
+    position: relative;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13)
+  }
+
+  .whatsapp-chat-bubble-white {
+    background: white;
+    padding: 7px 12px;
+    border-radius: 4px;
+    max-width: 50%;
+    border-radius: 7.5px;
+    position: relative;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13)
+  }
+
+</style>
+
+
+<div class="container-fluid">
+<!-- from bootstrap -->
+
+  <!-- Click to load various div into the body of the chatview -->
+  <div id="load-more" v-on:click="greet">
+    Click to load more...
+  </div>
+
+  <div class="date">
+    29 Dec 2016
+  </div>
+
+
+  <div class="container-left">
+    <span></span>
+    <span class="your-chat-bubble">
+      Every time you watch television only . Don’t you know your exams are going to start in next week.
+      <span class="right"><sub>5:12pm</sub></span>
+    </span>
+  </div>
+
+  <div class="container-right">
+    <span class="other-chat-bubble">
+       Yes .I know . I can not study every time .
+       <span class="right"><sub>5:12pm</sub></span>
+    </span>
+  </div>
+
+  <div class="container-left">
+    <span>
+      <img src="" alt="">
+    </span>
+    <span class="your-chat-bubble">
+      Who is asking you to study every time but give the sufficient time for your studies. 👌🏻
+      <span class="right"><sub>5:12pm</sub></span>
+
+    </span>
+  </div>
+
+  <div class="container-right">
+    <span class="other-chat-bubble">
+      I came from the school at 2 . Then at 4 I went for the tuition . Now you want me to study again .
+    </span>
+  </div>
+
+
+  <div class="container-left">
+    <span class="whatsapp-chat-bubble">
+      What is time now?
+    </span>
+  </div>
+
+  <!-- <div class="date">
+    1st April 2016
+  </div> -->
+
+
+  <div class="container-right">
+    <span class="whatsapp-chat-bubble-white">
+      It is 9 now .
+    </span>
+  </div>
+
+  <div class="container-right">
+    <span class="whatsapp-chat-bubble-white">
+      <span class="right">
+        <a href="https://www.youtube.com/watch?v=W8otWw6uPaM">https://www.youtube.com/watch?v=W8otWw6uPaM</a>
+
+      </span>
+      <div class="right">
+        <iframe width="360" height="215" src="https://www.youtube.com/embed/W8otWw6uPaM?ecver=1" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </span>
+  </div>
+
+  <div class="container-right">
+    <span class="whatsapp-chat-bubble-white">
+      <span class="right">
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/220px-Steve_Jobs_Headshot_2010-CROP.jpg">https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/220px-Steve_Jobs_Headshot_2010-CROP.jpg
+          </a>
+      </span>
+
+      <div class="right">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/220px-Steve_Jobs_Headshot_2010-CROP.jpg" alt="">
+      </div>
+    </span>
+  </div>
+
+  <div class="container-right">
+    <span class="whatsapp-chat-bubble-white">
+      <span class="right">
+        <!-- https://developers.google.com/maps/documentation/javascript/examples/control-disableUI -->
+        <a class="scrolloff" href="https://www.google.com.sg/maps/place/Singapore+760723/@1.426015,103.8275613,17z/data=!3m1!4b1!4m5!3m4!1s0x31da147173f4461d:0xc2eb0e281722db59!8m2!3d1.426015!4d103.82975?hl=en">https://www.google.com.sg/maps/place/Singapore+760723/@1.426015,103.8275613,17z/data=!3m1!4b1!4m5!3m4!1s0x31da147173f4461d:0xc2eb0e281722db59!8m2!3d1.426015!4d103.82975?hl=en</a>
+      </span>
+
+      <div class="right">
+        <iframe width="300" height="200" frameborder="0" style="border:0" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.582647141597!2d103.82756131498388!3d1.4260149989599904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da147173f4461d%3A0xc2eb0e281722db59!2sSingapore+760723!5e0!3m2!1sen!2ssg!4v1488770627290"></iframe>
+      </div>
+    </span>
+  </div>
+
+
+
+  <div class="container-right">
+    <span class="whatsapp-chat-bubble-white">
+      <span class="right">
+        <a href="http://stackoverflow.com/questions/31899794/vuejs-how-to-edit-an-array-item#31900348">http://stackoverflow.com/questions/31899794/vuejs-how-to-edit-an-array-item#31900348</a>
+      </span>
+
+      <div class="right">
+        <blockquote cite="http://">
+          <p>Stackoverflow</p>
+          <h3>Stackoverflow</h3>
+          <p>Stackoverflow</p>
+        </blockquote>
+
+      </div>
+    </span>
+  </div>
+
+  <div class="container-right">
+    <span class="whatsapp-chat-bubble-white">
+      <span class="right">
+        <a href="https://www.instagram.com/p/BRQ0rRkgbIg/">https://www.instagram.com/p/BRQ0rRkgbIg/</a>
+      </span>
+
+      <div class="right">
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BRQ0rRkgbIg/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">What a great reminder #VeggieTales</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by VeggieTales (@veggietalesofficial) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-03-05T16:18:05+00:00">Mar 5, 2017 at 8:18am PST</time></p></div></blockquote> <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
+      </div>
+    </span>
+  </div>
+
+
+
+  <div class="stick_bottom">
+    <span>
+      <input id="text-input" type="text" name="" value="">
+    </span>
+
+    <span class="float_right">
+      <button type="button" name="button">SEND</button>
+    </span>
+  </div>
+
+</div> <!-- container-fluid -->
+
+
+<script>
+  // import vueScrollbar from 'vue-scrollbar';
+  //
+  // export default {
+  //   components: { vueScrollbar }
+  // };
+
+  const app = new Vue({
+    el: '#load-more',
+
+    data: {
+      inputs: []
+    },
+
+    methods: {
+      greet() {
+        this.inputs.push({
+          one: '',
+          two: ''
+        })
+      },
+      deleteRow(index) {
+        this.inputs.splice(index,1)
+      }
+    }
+  })
+
+  var example1 = new Vue({
+    el: '#load-more',
+    methods: {
+       greet: function (event) {
+         // `this` inside methods points to the Vue instance
+         alert('Hello')
+         // `event` is the native DOM event
+        //  if (event) {
+        //    alert(event.target.tagName)
+        //  }
+       }
+     }
+  })
+</script>
+
+
+<!-- <div class="your-chat-bubble">
+  <span>
+    How are you?
+  </span>
+</div>
+
+<div class="other-chat-bubble">
+  <span>
+    I am fine. Thank you for asking.
+  </span>
+
+</div> -->

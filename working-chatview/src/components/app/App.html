@@ -1,0 +1,38 @@
+<div id="app">
+
+  <input v-model="getthings">
+  </p>
+  <p>{{ answer }}</p>
+
+  <div class="" v-for="message in AllMessages">
+    <div v-if="message.type === 'bubble'">
+      <bubble></bubble>
+    </div>
+
+    <div v-else-if="message.type === 'instagram'">
+      <instagram-bubble></instagram-bubble>
+    </div>
+
+    <div v-else-if="message.type === 'map'">
+      <map-bubble></map-bubble>
+    </div>
+
+    <div v-else>
+      <video-bubble></video-bubble>
+    </div>
+  </div>
+
+  <text-input></text-input>
+
+  <!-- <bubble></bubble>
+  <right></right>
+  <text-input></text-input>
+  <map-bubble></map-bubble>
+  <whatsapp-bubble></whatsapp-bubble>
+  <instagram-bubble></instagram-bubble>
+  <image-bubble></image-bubble>
+  <video-bubble></video-bubble>
+  <hyperlink-bubble></hyperlink-bubble> -->
+
+
+</div>
